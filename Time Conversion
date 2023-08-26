@@ -1,0 +1,7 @@
+public static string timeConversion(string s)
+    {
+        DateTime t=Convert.ToDateTime(s);
+        string twen=t.ToString("HH:mm:ss");
+        return twen;
+
+    }
