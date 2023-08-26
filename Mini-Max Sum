@@ -1,0 +1,12 @@
+public static void miniMaxSum(List<int> arr)
+    {
+        long totalsum=arr.Sum();
+        long max=arr.Max();
+        long min=arr.Min();
+        
+        long tmax=totalsum-min;
+        long tmin=totalsum-max;
+        
+        Console.Write(tmin + " " + tmax);
+
+    }
