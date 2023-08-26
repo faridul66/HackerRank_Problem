@@ -1,0 +1,14 @@
+ public static int diagonalDifference(List<List<int>> arr)
+    {
+        int n=arr.Count;
+        int lsum=0;
+        int rsum=0;
+        
+        for(int i=0;i<n;i++)
+        {
+            lsum+=arr[i][i];
+            rsum+=arr[i][n-1-i];
+        }
+        return Math.Abs(lsum-rsum);
+
+    }
