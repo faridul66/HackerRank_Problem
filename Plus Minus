@@ -1,0 +1,27 @@
+public static void plusMinus(List<int> arr)
+    {
+        int n=arr.Count;
+        float f=0,s=0,z=0;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]>0)
+            {
+                f++;
+            }
+            else if(arr[i]<0){
+                s++;
+            }
+            else{
+                z++;
+            }
+        }
+
+        f=f/n;
+        s=s/n;
+        z=z/n;
+        
+        Console.WriteLine(f.ToString("N6"));
+        Console.WriteLine(s.ToString("N6"));
+        Console.WriteLine(z.ToString("N6"));
+
+    }
