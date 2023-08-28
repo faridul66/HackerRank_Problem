@@ -1,0 +1,24 @@
+    public static string dayOfProgrammer(int year)
+    
+    {
+        string dateOfTheYear="";
+       if(year!=1918 && year!=1800 && year!=1900 && year!=1700 && year!=2000){
+    if(year%400==0 || (year%4==0 && year%100!=0)){
+        dateOfTheYear = "12.09."+year;
+    }
+    else{
+        dateOfTheYear = "13.09."+year;
+    }
+}
+else if(year==1918){
+        dateOfTheYear = "26.09."+year;
+}
+//Since the years 1700,1800,1900,2000 are not considered as leap year even though they satisfy the leapyear condition.
+else if(year==1700 || year==1800 || year==1900 || year==2000){
+    dateOfTheYear = "12.09."+year;
+}
+return dateOfTheYear;
+
+    }
+
+}
