@@ -1,0 +1,42 @@
+public static int migratoryBirds(List<int> arr)
+    {
+        int[] sights = new int[5];
+        for (int m = 0; m < arr.Count; m++)
+        {
+            switch (arr[m])
+            {
+                case 1:
+                    sights[0]++;
+                    break;
+                case 2:
+                    sights[1]++;
+                    break;
+                case 3:
+                    sights[2]++;
+                    break;
+                case 4:
+                    sights[3]++;
+                    break;
+                case 5:
+                    sights[4]++;
+                    break;
+            }
+        }
+        return MaxKey(sights);
+
+    }
+    private static int MaxKey(int[] arr)
+    {
+        int max = 0;
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (max == arr[i])
+                return i + 1;
+        }
+        return 0;
+    }
