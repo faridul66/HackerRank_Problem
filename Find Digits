@@ -1,0 +1,14 @@
+public static int findDigits(int n)
+    {
+        int digit=0;
+        int num=n;
+        while(n>0){
+            int d=n%10;
+            n=n/10;
+            if(num%d==0){
+                digit++;
+            }
+        }
+        return digit;
+
+    }
