@@ -1,0 +1,23 @@
+public static int beautifulDays(int i, int j, int k)
+    {
+       int result = 0;
+            for (int x = i; x <= j; x++)
+            {
+                int lo = x;
+                int lastd;
+                int reverse = 0;
+                while (lo > 0)
+                {
+                    lastd = lo % 10;
+                    reverse = (reverse * 10) + lastd;
+                    lo /= 10;
+                }
+                if (Math.Abs(x - reverse) % k == 0)
+                {
+                    result++;
+                }
+
+            }
+            return result; 
+
+    }
