@@ -1,0 +1,27 @@
+public static int jumpingOnClouds(List<int> c)
+{
+    int len = c.Count;
+    int result = 0;
+    int i = 0;
+
+    while (i < len - 1)
+    {
+        if (i + 2 < len && c[i + 2] == 0)
+        {
+            i += 2;
+        }
+        else if (i + 1 < len && c[i + 1] == 0)
+        {
+            i++;
+        }
+        else
+        {
+            // Handle the case where there are no more valid jumps
+            break;
+        }
+
+        result++;
+    }
+
+    return result;
+}
